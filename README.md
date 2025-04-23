@@ -23,3 +23,32 @@ The LSTM is implemented with Keras using 100 LSTM cells for the word vector embe
  Non-trainable params: 0 (0.00 B)
 None
 
+# 🏃 Running the MLP
+To run the MLP, simply open the `FinalMLP.ipynb` file with jupiter notebook, and run the cells in order. We utilized Google Colab in this project.
+
+## 🔧 Architecture
+### Input Layer
+Takes in a combined feature vector that merges:
+TF-IDF features from the article's title and description (up to 1500 features).
+21 engineered numerical features (e.g., sentiment scores, word counts, zero-shot scores, etc.).
+
+### Hidden Layers
+First Hidden Layer
+Fully connected (Linear) layer with 512 neurons.
+ReLU activation function.
+Dropout (30%) to prevent overfitting.
+Second Hidden Layer
+Fully connected layer with 256 neurons (half of the previous).
+ReLU activation again for non-linearity.
+
+### Output Layer
+Fully connected layer with 4 output units, one for each news class.
+No activation applied here — handled internally by CrossEntropyLoss.
+
+### Training Details
+Loss Function: Cross Entropy
+Optimizer: Adam
+Learning Rate: 0.0005
+Epochs: 20
+Batch Size: 64
+
