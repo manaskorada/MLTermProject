@@ -52,3 +52,9 @@ Learning Rate: 0.0005
 Epochs: 20
 Batch Size: 64
 
+# 🏃 Running the CNN
+To run the cnn, the train and test data must be already downloaded, and running the training cell allows you to upload them to the notebook. This approach was taken due to my colab notebook having pathing issues to my device, and I had to work around it.
+I utilized the A100 GPU in colab for practical training times, as this process was often very lengthy across 20 Epochs, so it is important to set the logic to 'CPU' or the base available colab card if the user does NOT have colab pro. From there, run each cell in order and ensure runtime is complete before executing the next one.
+
+
+
