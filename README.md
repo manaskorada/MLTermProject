@@ -56,5 +56,18 @@ Batch Size: 64
 To run the cnn, the train and test data must be already downloaded, and running the training cell allows you to upload them to the notebook. This approach was taken due to my colab notebook having pathing issues to my device, and I had to work around it.
 I utilized the A100 GPU in colab for practical training times, as this process was often very lengthy across 20 Epochs, so it is important to set the logic to 'CPU' or the base available colab card if the user does NOT have colab pro. From there, run each cell in order and ensure runtime is complete before executing the next one.
 
+### Input Layer
+Takes in the features shaped by the number of numeric columns in the dataset.
+
+### Blocks
+Block 1, 2, and 3 have sizes of 32, 64, and 128 filters respectively, all with kernal size 3 and ReLU.
+
+### Training details
+Loss function: cross entropy
+Optimizer: adam
+Epochs: 20, with included early stopping
+Batch size: 32
+Validation split: 20%
+
 
 
